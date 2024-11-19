@@ -1,5 +1,5 @@
 import NextAuth from 'next-auth';
-import { authconfig } from './auth.config';
+import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
@@ -17,7 +17,7 @@ async function getUser(email: string): Promise<User | undefined> {
 }
 
 export const { auth, signIn, signOut } = NextAuth({
-    ...authconfig,
+    ...authConfig,
     providers: [
         Credentials({
             async authorize(credentials) {

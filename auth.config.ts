@@ -1,6 +1,6 @@
 import type { NextAuthConfig } from 'next-auth';
 
-export const authconfig = {
+export const authConfig = {
     pages: {
         signIn: '/login',
     },
